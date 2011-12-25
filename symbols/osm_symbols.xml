@@ -1,0 +1,150 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="0">
+  <symbols>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_motorway">
+      <layer pass="3" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="1"/>
+      </layer>
+      <layer pass="4" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="251,145,57,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="round"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.8"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_primary">
+      <layer pass="1" class="SimpleLine" locked="1">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="1"/>
+      </layer>
+      <layer pass="2" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="255,251,137,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="round"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.8"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_road">
+      <layer pass="0" class="SimpleLine" locked="1">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.7"/>
+      </layer>
+      <layer pass="1" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="255,255,255,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="round"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.6"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_secondary">
+      <layer pass="1" class="SimpleLine" locked="1">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.7"/>
+      </layer>
+      <layer pass="2" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="255,251,137,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="round"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.6"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_small">
+      <layer pass="0" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.05"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_tertiary">
+      <layer pass="0" class="SimpleLine" locked="1">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.7"/>
+      </layer>
+      <layer pass="1" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="255,255,255,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="round"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.6"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="line" name="osm_trunk">
+      <layer pass="2" class="SimpleLine" locked="1">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="143,143,143,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="1"/>
+      </layer>
+      <layer pass="3" class="SimpleLine" locked="0">
+        <prop k="capstyle" v="square"/>
+        <prop k="color" v="255,223,105,255"/>
+        <prop k="customdash" v="5;2"/>
+        <prop k="joinstyle" v="round"/>
+        <prop k="offset" v="0"/>
+        <prop k="penstyle" v="solid"/>
+        <prop k="use_custom_dash" v="0"/>
+        <prop k="width" v="0.8"/>
+      </layer>
+    </symbol>
+  </symbols>
+  <colorramps/>
+</qgis_style>
