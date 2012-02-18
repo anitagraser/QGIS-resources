@@ -14,7 +14,7 @@
     </rules>
     <symbols>
       <symbol outputUnit="MM" alpha="1" type="line" name="0">
-        <layer pass="4" class="SimpleLine" locked="1">
+        <layer pass="0" class="SimpleLine" locked="1">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="143,143,143,255"/>
           <prop k="customdash" v="5;2"/>
@@ -24,7 +24,7 @@
           <prop k="use_custom_dash" v="0"/>
           <prop k="width" v="1.2"/>
         </layer>
-        <layer pass="5" class="SimpleLine" locked="0">
+        <layer pass="1" class="SimpleLine" locked="0">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="255,255,255,255"/>
           <prop k="customdash" v="5;2"/>
@@ -36,7 +36,7 @@
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="line" name="1">
-        <layer pass="2" class="SimpleLine" locked="1">
+        <layer pass="0" class="SimpleLine" locked="1">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="143,143,143,255"/>
           <prop k="customdash" v="5;2"/>
@@ -46,7 +46,7 @@
           <prop k="use_custom_dash" v="0"/>
           <prop k="width" v="1.1"/>
         </layer>
-        <layer pass="3" class="SimpleLine" locked="0">
+        <layer pass="1" class="SimpleLine" locked="0">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="255,255,255,255"/>
           <prop k="customdash" v="5;2"/>
@@ -58,7 +58,7 @@
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="line" name="2">
-        <layer pass="2" class="SimpleLine" locked="1">
+        <layer pass="0" class="SimpleLine" locked="1">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="143,143,143,255"/>
           <prop k="customdash" v="5;2"/>
@@ -68,7 +68,7 @@
           <prop k="use_custom_dash" v="0"/>
           <prop k="width" v="0.9"/>
         </layer>
-        <layer pass="3" class="SimpleLine" locked="0">
+        <layer pass="1" class="SimpleLine" locked="0">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="255,255,255,255"/>
           <prop k="customdash" v="5;2"/>
@@ -80,7 +80,7 @@
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="line" name="3">
-        <layer pass="2" class="SimpleLine" locked="1">
+        <layer pass="0" class="SimpleLine" locked="1">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="143,143,143,255"/>
           <prop k="customdash" v="5;2"/>
@@ -90,7 +90,7 @@
           <prop k="use_custom_dash" v="0"/>
           <prop k="width" v="1"/>
         </layer>
-        <layer pass="3" class="SimpleLine" locked="0">
+        <layer pass="1" class="SimpleLine" locked="0">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="255,255,255,255"/>
           <prop k="customdash" v="5;2"/>
@@ -283,9 +283,9 @@
     <edittype type="0" name="y1"/>
     <edittype type="0" name="y2"/>
   </edittypes>
-  <editform></editform>
+  <editform>.</editform>
   <editforminit></editforminit>
-  <annotationform></annotationform>
+  <annotationform>.</annotationform>
   <attributeactions/>
   <overlay display="false" type="diagram">
     <renderer item_interpretation="linear">
