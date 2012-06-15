@@ -1,0 +1,11 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="0">
+  <symbols/>
+  <colorramps>
+    <colorramp type="gradient" name="rainbow">
+      <prop k="color1" v="250,8,8,255"/>
+      <prop k="color2" v="92,11,122,255"/>
+      <prop k="stops" v="0.3;237,244,25,255:0.5;46,155,45,255:0.66;29,18,122,255:0.82;152,6,130,255"/>
+    </colorramp>
+  </colorramps>
+</qgis_style>
