@@ -5,7 +5,9 @@ This is a collection of QGIS .qml and .sld styles. SLD is supported by QGIS >= 1
 ##Contents
 
 * clc_2006_SLC_de.sld - Corine Land Cover - official colors (German labels)
-* corine_nice.qml - Corine Land Cover - nice colors
+* corine_nice_de.qml - Corine Land Cover - nice colors (German)
+* corine_nice_pl.qml - Corine Land Cover - nice colors (Polish)
+* corine_nice_pl.sld - Corine Land Cover - nice colors (Polish)
 * nvc_phase_1.qml - National Vegetation Classification
 * ogdwien_realnut_level2 - OGDWien Realnutzung Level 2 
 * osm_light_line.qml - OpenStreetMap light line style, mostly road classes
