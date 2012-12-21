@@ -1,0 +1,906 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="0">
+  <symbols>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Blues 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="239,243,255,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Blues 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="189,215,231,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Blues 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="107,174,214,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Blues 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="49,130,189,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Blues 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="8,81,156,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuGn 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="237,248,251,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuGn 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="178,226,226,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuGn 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="102,194,164,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuGn 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="44,162,95,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuGn 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="0,109,44,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuPu 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="237,248,251,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuPu 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="179,205,227,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuPu 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="140,150,198,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuPu 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="136,86,167,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class BuPu 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="129,15,124,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class GnBu 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="240,249,232,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class GnBu 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="186,228,188,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class GnBu 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="123,204,196,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class GnBu 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="67,162,202,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class GnBu 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="8,104,172,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greens 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="237,248,233,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greens 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="186,228,179,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greens 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="116,196,118,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greens 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="49,163,84,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greens 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="0,109,44,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greys 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="247,247,247,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greys 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="204,204,204,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greys 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="150,150,150,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greys 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="99,99,99,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Greys 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="37,37,37,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class OrRd 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,240,217,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class OrRd 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="253,204,138,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class OrRd 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="252,141,89,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class OrRd 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="227,74,51,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class OrRd 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="179,0,0,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Oranges 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,237,222,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Oranges 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="253,190,133,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Oranges 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="253,141,60,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Oranges 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="230,85,13,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Oranges 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="166,54,3,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBu 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="241,238,246,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBu 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="189,201,225,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBu 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="116,169,207,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBu 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="43,140,190,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBu 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="4,90,141,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBuGn 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="246,239,247,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBuGn 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="189,201,225,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBuGn 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="103,169,207,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBuGn 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="28,144,153,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuBuGn 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="1,108,89,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuRd 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="241,238,246,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuRd 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="215,181,216,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuRd 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="223,101,176,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuRd 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="221,28,119,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class PuRd 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="152,0,67,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Purples 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="242,240,247,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Purples 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="203,201,226,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Purples 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="158,154,200,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Purples 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="117,107,177,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Purples 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="84,39,143,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class RdPu 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,235,226,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class RdPu 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="251,180,185,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class RdPu 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="247,104,161,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class RdPu 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="197,27,138,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class RdPu 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="122,1,119,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Reds 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,229,217,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Reds 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="252,174,145,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Reds 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="251,106,74,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Reds 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="222,45,38,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class Reds 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="165,15,21,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGn 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="255,255,204,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGn 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="194,230,153,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGn 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="120,198,121,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGn 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="49,163,84,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGn 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="0,104,55,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGnBu 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="255,255,204,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGnBu 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="161,218,180,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGnBu 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="65,182,196,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGnBu 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="44,127,184,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlGnBu 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="37,52,148,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrBr 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="255,255,212,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrBr 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,217,142,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrBr 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,153,41,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrBr 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="217,95,14,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrBr 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="153,52,4,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrRd 1">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="255,255,178,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrRd 2">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="254,204,92,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrRd 3">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="253,141,60,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrRd 4">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="240,59,32,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+    <symbol outputUnit="MM" alpha="1" type="fill" name="5-class YlOrRd 5">
+      <layer pass="0" class="SimpleFill" locked="0">
+        <prop k="color" v="189,0,38,255"/>
+        <prop k="color_border" v="145,145,145,255"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="style" v="solid"/>
+        <prop k="style_border" v="solid"/>
+        <prop k="width_border" v="0.26"/>
+      </layer>
+    </symbol>
+  </symbols>
+  <colorramps/>
+</qgis_style>
