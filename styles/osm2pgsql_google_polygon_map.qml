@@ -9,6 +9,7 @@
       <rule scalemaxdenom="50000" filter=" &quot;building&quot;  = 'yes'" symbol="3" scalemindenom="20000" label="Building Zoom"/>
       <rule filter=" &quot;amenity&quot;  IN ( 'university', 'college', 'school')" symbol="4" label="College &amp; University &amp; Private School"/>
       <rule filter=" &quot;amenity&quot;  = 'parking'" symbol="5" label="Parking"/>
+      <rule scalemaxdenom="8000" filter=" &quot;landuse&quot;  = 'grass'" symbol="6" label="Grass"/>
     </rules>
     <symbols>
       <symbol outputUnit="MM" alpha="0.396078" type="fill" name="0">
@@ -75,6 +76,16 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="offset" v="0,0"/>
           <prop k="style" v="dense4"/>
+          <prop k="style_border" v="no"/>
+          <prop k="width_border" v="0.26"/>
+        </layer>
+      </symbol>
+      <symbol outputUnit="MM" alpha="1" type="fill" name="6">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="color" v="177,217,132,255"/>
+          <prop k="color_border" v="0,0,0,255"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="style" v="solid"/>
           <prop k="style_border" v="no"/>
           <prop k="width_border" v="0.26"/>
         </layer>
