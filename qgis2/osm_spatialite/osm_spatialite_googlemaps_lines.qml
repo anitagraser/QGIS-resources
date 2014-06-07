@@ -1,17 +1,18 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.2.0-Valmiera" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.2.0-Valmiera" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
       <rule filter="&quot;highway&quot; is not null" label="roads">
         <rule filter="&quot;highway&quot; = 'motorway' " symbol="0" label="motorway"/>
         <rule filter="&quot;highway&quot; IN ( 'motorway_link','trunk','primary')" symbol="1" label="trunk &amp; primary"/>
         <rule filter="&quot;highway&quot; IN ( 'trunk_link','primary_link','secondary','secondary_link','road','tertiary','tertiary_link')" symbol="2" label="roads"/>
-        <rule scalemaxdenom="125000" filter="&quot;highway&quot; is not null" symbol="3" scalemindenom="1000" label="minor roads"/>
+        <rule scalemaxdenom="1000" filter="&quot;highway&quot; is not null" symbol="3" scalemindenom="1" label="minor roads"/>
+        <rule scalemaxdenom="125000" filter="&quot;highway&quot; is not null" symbol="4" scalemindenom="1000" label="minor roads"/>
       </rule>
-      <rule filter="&quot;other_tags&quot; LIKE '%&quot;rail&quot;%'" symbol="4" label="rails"/>
+      <rule filter="&quot;other_tags&quot; LIKE '%&quot;rail&quot;%'" symbol="5" label="rails"/>
       <rule filter="&quot;waterway&quot; = 'river'" label="river">
-        <rule scalemaxdenom="125000" symbol="5" label="river"/>
-        <rule symbol="6" scalemindenom="125000" label="river"/>
+        <rule scalemaxdenom="125000" symbol="6" label="river"/>
+        <rule symbol="7" scalemindenom="125000" label="river"/>
       </rule>
     </rules>
     <symbols>
@@ -106,6 +107,36 @@
         </layer>
       </symbol>
       <symbol alpha="1" type="line" name="3">
+        <layer pass="0" class="SimpleLine" locked="1">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="143,143,143,255"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width" v="0.7"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+        <layer pass="1" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="255,255,255,255"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="round"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width" v="0.6"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="line" name="4">
         <layer pass="0" class="SimpleLine" locked="0">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="143,143,143,255"/>
@@ -121,7 +152,7 @@
           <prop k="width_unit" v="MM"/>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" name="4">
+      <symbol alpha="1" type="line" name="5">
         <layer pass="0" class="SimpleLine" locked="0">
           <prop k="capstyle" v="square"/>
           <prop k="color" v="176,176,176,255"/>
@@ -143,7 +174,7 @@
           <prop k="offset_unit" v="MM"/>
           <prop k="placement" v="interval"/>
           <prop k="rotate" v="1"/>
-          <symbol alpha="1" type="marker" name="@4@1">
+          <symbol alpha="1" type="marker" name="@5@1">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="255,0,0,255"/>
@@ -163,7 +194,7 @@
           </symbol>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" name="5">
+      <symbol alpha="1" type="line" name="6">
         <layer pass="0" class="SimpleLine" locked="0">
           <prop k="capstyle" v="round"/>
           <prop k="color" v="182,217,255,255"/>
@@ -179,7 +210,7 @@
           <prop k="width_unit" v="MM"/>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" name="6">
+      <symbol alpha="1" type="line" name="7">
         <layer pass="0" class="SimpleLine" locked="0">
           <prop k="capstyle" v="round"/>
           <prop k="color" v="182,217,255,255"/>
@@ -276,7 +307,7 @@
     <property key="labeling/rightDirectionSymbol" value=">"/>
     <property key="labeling/scaleMax" value="10000000"/>
     <property key="labeling/scaleMin" value="1"/>
-    <property key="labeling/scaleVisibility" value="false"/>
+    <property key="labeling/scaleVisibility" value="true"/>
     <property key="labeling/shadowBlendMode" value="6"/>
     <property key="labeling/shadowColorB" value="0"/>
     <property key="labeling/shadowColorG" value="0"/>
