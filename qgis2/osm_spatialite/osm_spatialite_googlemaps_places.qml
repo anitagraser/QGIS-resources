@@ -1,28 +1,54 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.2.0-Valmiera" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-  <renderer-v2 symbollevels="0" type="singleSymbol">
+<qgis version="2.4.0-Chugiak" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+  <renderer-v2 symbollevels="0" type="RuleRenderer">
+    <rules>
+      <rule filter=" &quot;place&quot;  in ( 'state' , 'region' , 'city' , 'town' )" symbol="0" scalemindenom="250000" label="200000 - 0"/>
+      <rule scalemaxdenom="250000" symbol="1" label="0 - 200000"/>
+    </rules>
     <symbols>
       <symbol alpha="1" type="marker" name="0">
         <layer pass="0" class="SimpleMarker" locked="0">
           <prop k="angle" v="0"/>
-          <prop k="color" v="153,29,248,255"/>
+          <prop k="color" v="130,14,76,255"/>
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="horizontal_anchor_point" v="1"/>
           <prop k="name" v="circle"/>
           <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0"/>
           <prop k="offset_unit" v="MM"/>
           <prop k="outline_style" v="solid"/>
           <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="0,0"/>
           <prop k="outline_width_unit" v="MM"/>
           <prop k="scale_method" v="area"/>
           <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="0,0"/>
+          <prop k="size_unit" v="MM"/>
+          <prop k="vertical_anchor_point" v="1"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="marker" name="1">
+        <layer pass="0" class="SimpleMarker" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="130,14,76,255"/>
+          <prop k="color_border" v="0,0,0,255"/>
+          <prop k="horizontal_anchor_point" v="1"/>
+          <prop k="name" v="circle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0"/>
+          <prop k="outline_width_map_unit_scale" v="0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="scale_method" v="area"/>
+          <prop k="size" v="2"/>
+          <prop k="size_map_unit_scale" v="0,0"/>
           <prop k="size_unit" v="MM"/>
           <prop k="vertical_anchor_point" v="1"/>
         </layer>
       </symbol>
     </symbols>
-    <rotation/>
-    <sizescale scalemethod="area"/>
   </renderer-v2>
   <customproperties>
     <property key="labeling" value="pal"/>
@@ -42,6 +68,7 @@
     <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
     <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
     <property key="labeling/bufferTransp" value="0"/>
+    <property key="labeling/centroidInside" value="false"/>
     <property key="labeling/centroidWhole" value="false"/>
     <property key="labeling/dataDefined/ScaleVisibility" value="1~~1~~CASE WHEN &quot;place&quot; in ( 'city','town' , 'village' , 'suburb' ) &#xa;THEN 0&#xa;ELSE 1&#xa;END~~"/>
     <property key="labeling/dataDefined/Size" value="1~~1~~CASE WHEN &quot;place&quot; IN ('city', 'town') THEN 8 ELSE 6 END~~"/>
@@ -57,7 +84,7 @@
     <property key="labeling/fontCapitals" value="0"/>
     <property key="labeling/fontFamily" value="Arial"/>
     <property key="labeling/fontItalic" value="false"/>
-    <property key="labeling/fontLetterSpacing" value="0"/>
+    <property key="labeling/fontLetterSpacing" value="1"/>
     <property key="labeling/fontLimitPixelSize" value="false"/>
     <property key="labeling/fontMaxPixelSize" value="10000"/>
     <property key="labeling/fontMinPixelSize" value="3"/>
@@ -194,23 +221,23 @@
     <selectedonly on=""/>
   </labelattributes>
   <edittypes>
-    <edittype labelontop="0" editable="0" type="0" name="GEOMETRY"/>
-    <edittype labelontop="0" editable="0" type="0" name="OGC_FID"/>
-    <edittype labelontop="0" editable="0" type="0" name="address"/>
-    <edittype labelontop="0" editable="0" type="0" name="barrier"/>
-    <edittype labelontop="0" editable="0" type="0" name="highway"/>
-    <edittype labelontop="0" editable="0" type="0" name="is_in"/>
-    <edittype labelontop="0" editable="0" type="0" name="man_made"/>
-    <edittype labelontop="0" editable="0" type="0" name="name"/>
-    <edittype labelontop="0" editable="0" type="0" name="osm_id"/>
-    <edittype labelontop="0" editable="0" type="0" name="other_tags"/>
-    <edittype labelontop="0" editable="0" type="0" name="place"/>
-    <edittype labelontop="0" editable="0" type="0" name="ref"/>
+    <edittype labelontop="0" editable="1" name="OGC_FID"/>
+    <edittype labelontop="0" editable="1" name="GEOMETRY"/>
+    <edittype labelontop="0" editable="1" name="osm_id"/>
+    <edittype labelontop="0" editable="1" name="name"/>
+    <edittype labelontop="0" editable="1" name="barrier"/>
+    <edittype labelontop="0" editable="1" name="highway"/>
+    <edittype labelontop="0" editable="1" name="ref"/>
+    <edittype labelontop="0" editable="1" name="address"/>
+    <edittype labelontop="0" editable="1" name="is_in"/>
+    <edittype labelontop="0" editable="1" name="place"/>
+    <edittype labelontop="0" editable="1" name="man_made"/>
+    <edittype labelontop="0" editable="1" name="other_tags"/>
   </edittypes>
   <editform></editform>
   <editforminit></editforminit>
   <featformsuppress>0</featformsuppress>
-  <annotationform>.</annotationform>
+  <annotationform>../../../../OSGEO4~1/bin</annotationform>
   <editorlayout>generatedlayout</editorlayout>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
