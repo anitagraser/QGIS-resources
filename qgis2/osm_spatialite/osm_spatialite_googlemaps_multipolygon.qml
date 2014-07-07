@@ -12,7 +12,7 @@
     </rules>
     <symbols>
       <symbol alpha="1" type="fill" name="0">
-        <layer pass="2" class="SimpleFill" locked="0">
+        <layer pass="1" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
           <prop k="color" v="182,217,255,255"/>
@@ -25,9 +25,26 @@
           <prop k="style_border" v="no"/>
           <prop k="width_border" v="0.26"/>
         </layer>
+        <layer pass="2" class="ShapeburstFill" locked="0">
+          <prop k="blur_radius" v="2"/>
+          <prop k="color1" v="0,0,255,255"/>
+          <prop k="color2" v="0,255,0,255"/>
+          <prop k="color_type" v="0"/>
+          <prop k="discrete" v="0"/>
+          <prop k="distance_map_unit_scale" v="0,0"/>
+          <prop k="distance_unit" v="MM"/>
+          <prop k="ignore_rings" v="0"/>
+          <prop k="max_distance" v="3"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="shapeburst_color" v="173,206,241,255"/>
+          <prop k="shapeburst_color2" v="182,217,255,255"/>
+          <prop k="use_whole_shape" v="0"/>
+        </layer>
       </symbol>
       <symbol alpha="1" type="fill" name="1">
-        <layer pass="2" class="SimpleFill" locked="0">
+        <layer pass="1" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
           <prop k="color" v="203,223,170,255"/>
@@ -45,7 +62,7 @@
         <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="222,219,211,255"/>
+          <prop k="color" v="233,230,222,255"/>
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
@@ -357,7 +374,7 @@
     <edittype labelontop="0" editable="1" name="tourism"/>
     <edittype labelontop="0" editable="1" name="other_tags"/>
   </edittypes>
-  <editform></editform>
+  <editform>.</editform>
   <editforminit></editforminit>
   <featformsuppress>0</featformsuppress>
   <annotationform>../../../../OSGeo4W64/bin</annotationform>
