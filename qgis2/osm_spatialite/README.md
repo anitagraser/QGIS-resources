@@ -1,6 +1,8 @@
 Styles for SpatiaLite databases 
 ===============================
 These styles can be applied to layers from SpatiaLite databases which were create from OSM using ogr2ogr.
+For more details check http://anitagraser.com/2014/05/31/a-guide-to-googlemaps-like-maps-with-osm-in-qgis/
+
 
 Google Maps Style
 -----------------
@@ -10,4 +12,3 @@ Google Maps Style
 Stamen Toner Lite Style
 -----------------------
 ![alt tag](https://farm4.staticflickr.com/3870/14606719083_f6925de916_o_d.png)
-For more details check http://anitagraser.com/2014/05/31/a-guide-to-googlemaps-like-maps-with-osm-in-qgis/
