@@ -1,11 +1,11 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.3.0-Master" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.4.0-Chugiak" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule filter="&quot;natural&quot; = 'water' or &quot;other_tags&quot; LIKE '%&quot;water&quot;%'" symbol="0"/>
-      <rule filter="&quot;landuse&quot; = 'forest' or &quot;leisure&quot; = 'park'" symbol="1"/>
-      <rule filter=" &quot;aeroway&quot; is not null or &quot;landuse&quot; = 'industrial'"/>
-      <rule filter="&quot;landuse&quot; = 'residential'"/>
+      <rule filter="&quot;natural&quot; = 'water' or &quot;other_tags&quot; LIKE '%&quot;water&quot;%' or &quot;other_tags&quot; LIKE '%&quot;waterway&quot;%'" symbol="0" label="water"/>
+      <rule scalemaxdenom="400000" filter="&quot;landuse&quot; = 'forest' or &quot;leisure&quot; = 'park'" symbol="1" scalemindenom="1" label="forest &amp; park"/>
+      <rule filter=" &quot;aeroway&quot; is not null or &quot;landuse&quot; = 'industrial'" label="industrial"/>
+      <rule filter="&quot;landuse&quot; = 'residential'" label="residential"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="fill" name="0">
@@ -209,33 +209,33 @@
     <selectedonly on=""/>
   </labelattributes>
   <edittypes>
-    <edittype labelontop="0" editable="0" name="OGC_FID"/>
-    <edittype labelontop="0" editable="0" name="GEOMETRY"/>
-    <edittype labelontop="0" editable="0" name="osm_id"/>
-    <edittype labelontop="0" editable="0" name="osm_way_id"/>
-    <edittype labelontop="0" editable="0" name="name"/>
-    <edittype labelontop="0" editable="0" name="type"/>
-    <edittype labelontop="0" editable="0" name="aeroway"/>
-    <edittype labelontop="0" editable="0" name="amenity"/>
-    <edittype labelontop="0" editable="0" name="admin_level"/>
-    <edittype labelontop="0" editable="0" name="barrier"/>
-    <edittype labelontop="0" editable="0" name="boundary"/>
-    <edittype labelontop="0" editable="0" name="building"/>
-    <edittype labelontop="0" editable="0" name="craft"/>
-    <edittype labelontop="0" editable="0" name="geological"/>
-    <edittype labelontop="0" editable="0" name="historic"/>
-    <edittype labelontop="0" editable="0" name="land_area"/>
-    <edittype labelontop="0" editable="0" name="landuse"/>
-    <edittype labelontop="0" editable="0" name="leisure"/>
-    <edittype labelontop="0" editable="0" name="man_made"/>
-    <edittype labelontop="0" editable="0" name="military"/>
-    <edittype labelontop="0" editable="0" name="natural"/>
-    <edittype labelontop="0" editable="0" name="office"/>
-    <edittype labelontop="0" editable="0" name="place"/>
-    <edittype labelontop="0" editable="0" name="shop"/>
-    <edittype labelontop="0" editable="0" name="sport"/>
-    <edittype labelontop="0" editable="0" name="tourism"/>
-    <edittype labelontop="0" editable="0" name="other_tags"/>
+    <edittype labelontop="0" editable="1" name="OGC_FID"/>
+    <edittype labelontop="0" editable="1" name="GEOMETRY"/>
+    <edittype labelontop="0" editable="1" name="osm_id"/>
+    <edittype labelontop="0" editable="1" name="osm_way_id"/>
+    <edittype labelontop="0" editable="1" name="name"/>
+    <edittype labelontop="0" editable="1" name="type"/>
+    <edittype labelontop="0" editable="1" name="aeroway"/>
+    <edittype labelontop="0" editable="1" name="amenity"/>
+    <edittype labelontop="0" editable="1" name="admin_level"/>
+    <edittype labelontop="0" editable="1" name="barrier"/>
+    <edittype labelontop="0" editable="1" name="boundary"/>
+    <edittype labelontop="0" editable="1" name="building"/>
+    <edittype labelontop="0" editable="1" name="craft"/>
+    <edittype labelontop="0" editable="1" name="geological"/>
+    <edittype labelontop="0" editable="1" name="historic"/>
+    <edittype labelontop="0" editable="1" name="land_area"/>
+    <edittype labelontop="0" editable="1" name="landuse"/>
+    <edittype labelontop="0" editable="1" name="leisure"/>
+    <edittype labelontop="0" editable="1" name="man_made"/>
+    <edittype labelontop="0" editable="1" name="military"/>
+    <edittype labelontop="0" editable="1" name="natural"/>
+    <edittype labelontop="0" editable="1" name="office"/>
+    <edittype labelontop="0" editable="1" name="place"/>
+    <edittype labelontop="0" editable="1" name="shop"/>
+    <edittype labelontop="0" editable="1" name="sport"/>
+    <edittype labelontop="0" editable="1" name="tourism"/>
+    <edittype labelontop="0" editable="1" name="other_tags"/>
   </edittypes>
   <editform>.</editform>
   <editforminit></editforminit>
