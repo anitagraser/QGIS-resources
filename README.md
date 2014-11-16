@@ -1,6 +1,6 @@
 #QGIS Resources
 
-This is a collection of QGIS symbols and styles.
+This is a collection of QGIS symbols, styles, and scripts.
 
 ##How to use
 
