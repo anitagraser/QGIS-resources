@@ -4,9 +4,18 @@ def read_idf(idf_file):
     status = ""    
     nodes = {}
     links = {}
+    node_features = []
+    link_features = []
+    
+    counter = 0
     
     with open(idf_file) as f:
+        
         for line in f:
+            
+            if counter % 100000 == 0:
+                print "."
+            counter +=1
             
             line = line.strip().split(';')
             if line[0] == "tbl":
@@ -14,6 +23,7 @@ def read_idf(idf_file):
                 print status 
                 
             """ NODE """
+            
             if status == "Node" and line[0] == "atr":
                 attribute_names = line[1:]
             if status == "Node" and line[0] == "frm":
@@ -40,10 +50,14 @@ def read_idf(idf_file):
                 nodes[id] = QgsPoint(x,y)
                 fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(x,y)))
                 fet.setAttributes(line[1:])
-                node_pr.addFeatures([fet])
+                node_features.append(fet)
+                
                 
             """ LINK """    
+            
             if status == "Link" and line[0] == "atr":
+                node_pr.addFeatures(node_features)
+                node_features = []
                 attribute_names = line[1:]
             if status == "Link" and line[0] == "frm":
                 link_layer = QgsVectorLayer(
@@ -83,13 +97,15 @@ def read_idf(idf_file):
                     fet = QgsFeature()
                     fet.setGeometry(QgsGeometry.fromPolyline(line))
                     fet.setAttributes(attrs)
-                    link_pr.addFeatures([fet])   
+                    link_features.append(fet)
+                    
+                link_pr.addFeatures(link_features)   
+                link_features = []
                 
                 return [node_layer, link_layer]
             
             
 idf_file = "D:\Documents\QGIS\scripts\Routingexport_Wien_OGD.txt"
-idf_file = "D:\Documents\QGIS\scripts\Routingexport_Klagenfurt_OGD.txt"
 
 layers = read_idf(idf_file)
 
