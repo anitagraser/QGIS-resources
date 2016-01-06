@@ -7,7 +7,9 @@ class IDFRouter:
         """ for the basic network """
         self.nodes = {}
         self.links = {}
-        
+        self.node_features = []
+        self.link_features = []
+    
         """ for the routing graph """
         self.use_to_link = {}
         self.graph = QgsGraph()
@@ -61,10 +63,12 @@ class IDFRouter:
                     self.nodes[id] = QgsPoint(x,y)
                     fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(x,y)))
                     fet.setAttributes(line[1:])
-                    node_pr.addFeatures([fet])
+                    self.node_features.append(fet)
                     
                 """ LINK """    
                 if status == "Link" and line[0] == "atr":
+                    node_pr.addFeatures(self.node_features)
+                    self.node_features = []
                     attribute_names = line[1:]
                 if status == "Link" and line[0] == "frm":
                     link_layer = QgsVectorLayer(
@@ -104,17 +108,20 @@ class IDFRouter:
                     pass
                 
                 if status == "TurnEdge" and line[0] == "atr":
-                    """ prepare the links and return the layers """
+                    """ prepare the links """
                     for id,[attrs,line] in self.links.iteritems():
                         fet = QgsFeature()
                         fet.setGeometry(QgsGeometry.fromPolyline(line))
                         fet.setAttributes(attrs)
-                        link_pr.addFeatures([fet])
+                        self.link_features.append(fet)
                         
                         """ create routing graph entry """
                         vertex_id = self.graph.addVertex(QgsGeometry.fromPolyline(line).centroid().asPoint())
                         self.link_to_vertex[id] = vertex_id
                         self.vertex_to_link[vertex_id] = id
+                        
+                    link_pr.addFeatures(self.link_features)
+                    self.link_features = []
                     
                 if status == "TurnEdge" and line[0] == "rec":
                     """ create routing graph entry """
@@ -174,9 +181,9 @@ class IDFRouter:
         
         route_layer.updateExtents()
         QgsMapLayerRegistry.instance().addMapLayer(route_layer)
-            
-idf_file = "C:/Users/anita/Documents/GitHub/QGIS-resources/qgis2/scripts/ogd/Routingexport_Wien_OGD.txt"
-#idf_file = "C:/Users/anita/Documents/GitHub/QGIS-resources/qgis2/scripts/ogd/Routingexport_Klagenfurt_OGD.txt"
+
+#idf_file = "C:/Users/anita/Documents/GitHub/QGIS-resources/qgis2/scripts/ogd/Routingexport_Wien_OGD.txt"
+idf_file = "C:/Users/anita/Downloads/3_routingexport_ogd/3_routingexport_ogd.txt"
 
 router = IDFRouter(idf_file)
 
@@ -185,4 +192,4 @@ router = IDFRouter(idf_file)
 # 2 ... car 
 
 router.computeRoute(33000844,33114053,2)
-#router.computeRoute(601297920,601206884,2)
+router.computeRoute(23077740,901392332,2)
