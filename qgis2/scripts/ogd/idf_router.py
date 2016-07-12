@@ -165,8 +165,6 @@ class IDFRouter:
                                     speed_from_link = 15
                                     speed_to_link = 15
                                 elif i == 3: # car
-                                    #print '%.2f | %.2f' % (float(from_link[0][5]),float(from_link[0][6]))
-                                    #print '%.2f | %.2f' % (float(from_link[0][9]),float(from_link[0][10]))
                                     speed_from_link = 1.33 * max([0.1,float(from_link[0][5]),float(from_link[0][6])])*1000/60
                                     speed_to_link = 1.33 * max([0.1,float(to_link[0][5]),float(to_link[0][6])])*1000/60
                                 minutes_from_link = len_from_link / speed_from_link
@@ -281,6 +279,7 @@ class IDFRouter:
 You can get the IDF datasets used by this router from 
 https://www.data.gv.at/katalog/dataset/intermodales-verkehrsreferenzsystem-osterreich-gip-at-beta/resource/0775cf69-7119-43ec-af09-9da1016a4b94 
 """
+
 idf_file = "D:/Downloads/3_routingexport_wien_ogd/Routingexport_Wien_OGD.txt"
 
 """

@@ -1,0 +1,6 @@
+Routing graph
+
+Source: https://www.data.gv.at/katalog/dataset/intermodales-verkehrsreferenzsystem-osterreich-gip-at-beta/resource/0775cf69-7119-43ec-af09-9da1016a4b94
+
+License:
+CC BY 3.0 AT, published by Geoland.at
