@@ -1,8 +1,10 @@
 from PyQt4.QtCore import *
 from qgis.networkanalysis import *
+from datetime import datetime
 
 class IDFRouter:
-    def __init__(self,idf_file):
+    def __init__(self,idf_file,mode='distance'):
+        self.mode = mode 
         
         """ for the basic network """
         self.nodes = {}
@@ -16,16 +18,19 @@ class IDFRouter:
         self.link_to_vertex = {}
         self.vertex_to_link = {}
         
-        layers = self.read_idf(idf_file)
+        layers = self.readIdf(idf_file)
         
         for layer in layers:
             layer.updateExtents()
-            QgsMapLayerRegistry.instance().addMapLayer(layer)
             
         self.node_layer = layers[0]
         self.link_layer = layers[1]
+        
+    def drawLayers(self):
+        QgsMapLayerRegistry.instance().addMapLayer(self.node_layer)
+        QgsMapLayerRegistry.instance().addMapLayer(self.link_layer)
 
-    def read_idf(self,idf_file):
+    def readIdf(self,idf_file):
         status = ""
         
         with open(idf_file) as f:
@@ -34,7 +39,7 @@ class IDFRouter:
                 line = line.strip().split(';')
                 if line[0] == "tbl":
                     status = line[1]
-                    print status 
+                    print str(datetime.now()) + ' ' + status
                     
                 """ NODE """
                 if status == "Node" and line[0] == "atr":
@@ -129,11 +134,48 @@ class IDFRouter:
                     from_link_id = int(line[2])
                     to_link_id = int(line[3])
                     vehicle_type = "{0:08b}".format(int(line[5]))
-                    distance = QgsGeometry.fromPolyline(self.links[from_link_id][1]).length()/2 + QgsGeometry.fromPolyline(self.links[to_link_id][1]).length()/2
+                    #distance = QgsGeometry.fromPolyline(self.links[from_link_id][1]).length()/2 + QgsGeometry.fromPolyline(self.links[to_link_id][1]).length()/2
+                    from_link = self.links[from_link_id]
+                    to_link = self.links[to_link_id]
+                    len_from_link = float(from_link[0][15])
+                    len_to_link = float(to_link[0][15])
+                    
                     weights = []
                     for i in range(1,4):
                         if int(vehicle_type[i*-1]) == 1:
-                            weights.append(distance)
+                            if self.mode == 'traveltime':
+                                if i == 1: # pedestrian
+                                    speed_from_link = 5 # km/h 
+                                    speed_to_link = 5
+                                elif i == 2: # bike
+                                    speed_from_link = 15
+                                    speed_to_link = 15
+                                elif i == 3: # car
+                                    speed_from_link = max([0.1,float(from_link[0][5]),float(from_link[0][6])])
+                                    speed_to_link = max([0.1,float(to_link[0][5]),float(to_link[0][6])])
+                                minutes_from_link = len_from_link / (speed_from_link *1000/60)
+                                minutes_to_link = len_to_link / (speed_to_link *1000/60)
+                                traveltime = minutes_from_link/2 + minutes_to_link/2
+                                weights.append(traveltime) 
+                            elif self.mode == 'ambulance':
+                                if i == 1: # pedestrian
+                                    speed_from_link = 5 # km/h 
+                                    speed_to_link = 5
+                                elif i == 2: # bike
+                                    speed_from_link = 15
+                                    speed_to_link = 15
+                                elif i == 3: # car
+                                    #print '%.2f | %.2f' % (float(from_link[0][5]),float(from_link[0][6]))
+                                    #print '%.2f | %.2f' % (float(from_link[0][9]),float(from_link[0][10]))
+                                    speed_from_link = 1.33 * max([0.1,float(from_link[0][5]),float(from_link[0][6])])*1000/60
+                                    speed_to_link = 1.33 * max([0.1,float(to_link[0][5]),float(to_link[0][6])])*1000/60
+                                minutes_from_link = len_from_link / speed_from_link
+                                minutes_to_link = len_to_link / speed_to_link
+                                traveltime = minutes_from_link/2 + minutes_to_link/2
+                                weights.append(traveltime)
+                            else:
+                                distance = len_from_link/2 + len_to_link/2
+                                weights.append(distance)
                         else:
                             weights.append(9999999)
                     arc_id = edge_id = self.graph.addArc(
@@ -144,12 +186,13 @@ class IDFRouter:
                     
                 if status == "TurnUse":
                     """ not implemented yet """
-                    print "finishing up"
+                    print str(datetime.now()) + " finishing up "
                     return [node_layer, link_layer]
     
     def computeRoute(self,from_link,to_link,vehicle_type):
         """ computes the route for the given vehicle type and adds a route layer to the map """
         print 'route from %s to %s' %(from_link,to_link)
+        print str(datetime.now()) + " started"
         from_id = self.link_to_vertex[from_link]
         to_id = self.link_to_vertex[to_link]
 
@@ -181,15 +224,84 @@ class IDFRouter:
         
         route_layer.updateExtents()
         QgsMapLayerRegistry.instance().addMapLayer(route_layer)
+        
+        print str(datetime.now()) + " finished"
 
-#idf_file = "C:/Users/anita/Documents/GitHub/QGIS-resources/qgis2/scripts/ogd/Routingexport_Wien_OGD.txt"
-idf_file = "C:/Users/anita/Downloads/3_routingexport_ogd/3_routingexport_ogd.txt"
+    def computeCatchment(self,from_link,vehicle_type,r=0.020):
+        """ computes the catchment zone for the given vehicle type and adds it to the map """
+        print 'catchment zone around %s with size %f' %(from_link,r)
+        print str(datetime.now()) + " started"
+        from_id = self.link_to_vertex[from_link]
+        
+        upperBound = []
+        withinBound = []
+        i = 0
+        delta = qgis.utils.iface.mapCanvas().getCoordinateTransform().mapUnitsPerPixel() * 1
+        (tree,cost) = QgsGraphAnalyzer.dijkstra(self.graph,from_id,vehicle_type)
 
-router = IDFRouter(idf_file)
+        reachable_layer = QgsVectorLayer(
+            "LineString?crs=epsg:4326&field=id:integer&field=cost:double&index=yes", 
+            "reachable links", 
+            "memory")
+        reachable_pr = reachable_layer.dataProvider()
+        
+        while i < len(cost):
+            if cost[i] > r and tree[i] != -1:
+                outVertexId = self.graph.arc(tree[i]).outVertex()
+                if cost[outVertexId] < r:
+                    attrs,line = self.links[self.vertex_to_link[outVertexId]]
+                    attrs.append(cost[outVertexId])
+                    upperBound.append(i)
+                    fet = QgsFeature()
+                    fet.setGeometry(QgsGeometry.fromPolyline(line))
+                    fet.setAttributes(attrs)
+                    reachable_pr.addFeatures([fet])
+            elif tree[i] != -1:
+                withinBound.append(self.graph.arc(tree[i]).outVertex())
+                withinBound.append(self.graph.arc(tree[i]).inVertex())
+            i = i + 1
 
-# 0 ... pedestrian
-# 1 ... cyclist
-# 2 ... car 
+        for id in withinBound:
+            attrs,line = self.links[self.vertex_to_link[id]]
+            attrs = [ attrs[0] ]
+            attrs.append(float(cost[id]))
+            fet = QgsFeature()
+            fet.setGeometry(QgsGeometry.fromPolyline(line))
+            fet.setAttributes(attrs)
+            reachable_pr.addFeatures([fet])
+
+        reachable_layer.updateExtents()
+        QgsMapLayerRegistry.instance().addMapLayer(reachable_layer)
+
+        print str(datetime.now()) + " finished"
+        
+        
+
+""" 
+You can get the IDF datasets used by this router from 
+https://www.data.gv.at/katalog/dataset/intermodales-verkehrsreferenzsystem-osterreich-gip-at-beta/resource/0775cf69-7119-43ec-af09-9da1016a4b94 
+"""
+idf_file = "D:/Downloads/3_routingexport_wien_ogd/Routingexport_Wien_OGD.txt"
+
+"""
+Supported router modes are:
+default = distance (in meters)
+traveltime (in minutes) 
+ambulance (faster traveltime)
+"""
+
+router = IDFRouter(idf_file,mode='traveltime') 
+router.drawLayers()
+
+""" 
+This router supports three different modes of transport:
+0 ... pedestrian
+1 ... cyclist
+2 ... car 
+"""
 
 router.computeRoute(33000844,33114053,2)
-router.computeRoute(23077740,901392332,2)
+
+router.computeCatchment(33000844,2,2) # two minutes by car
+router.computeCatchment(33000844,0,10) # ten minutes by foot
+
