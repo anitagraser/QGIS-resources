@@ -93,7 +93,7 @@ class IDFRouter:
                         elif frm == "string":
                             field = QgsField(atr,QVariant.String)
                         link_pr.addAttributes([field])
-                    link_layer.updateFields()            
+                    link_layer.updateFields()
                 if status == "Link" and line[0] == "rec":
                     id = int(line[1])
                     try:
@@ -247,7 +247,6 @@ class IDFRouter:
         upperBound = []
         withinBound = []
         i = 0
-        delta = qgis.utils.iface.mapCanvas().getCoordinateTransform().mapUnitsPerPixel() * 1
         (tree,cost) = QgsGraphAnalyzer.dijkstra(self.graph,from_id,vehicle_type)
 
         reachable_layer = QgsVectorLayer(
