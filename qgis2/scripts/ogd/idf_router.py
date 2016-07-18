@@ -3,8 +3,9 @@ from qgis.networkanalysis import *
 from datetime import datetime
 
 class IDFRouter:
-    def __init__(self,idf_file,mode='distance'):
+    def __init__(self,idf_file,mode='distance',bbox=None):
         self.mode = mode 
+        self.bbox = bbox
         
         """ for the basic network """
         self.nodes = {}
@@ -65,8 +66,11 @@ class IDFRouter:
                     y = float(line[5])
                     # add a feature
                     fet = QgsFeature()
-                    self.nodes[id] = QgsPoint(x,y)
-                    fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(x,y)))
+                    pt = QgsPoint(x,y)
+                    if self.bbox and not self.bbox.contains(pt):
+                        continue
+                    self.nodes[id] = pt
+                    fet.setGeometry(QgsGeometry.fromPoint(pt))
                     fet.setAttributes(line[1:])
                     self.node_features.append(fet)
                     
@@ -92,8 +96,11 @@ class IDFRouter:
                     link_layer.updateFields()            
                 if status == "Link" and line[0] == "rec":
                     id = int(line[1])
-                    from_node = self.nodes[int(line[4])]
-                    to_node = self.nodes[int(line[5])]
+                    try:
+                        from_node = self.nodes[int(line[4])]
+                        to_node = self.nodes[int(line[5])]
+                    except KeyError:
+                        continue
                     self.links[id] = (line[1:], [from_node,to_node])
                     
                 """ LINK COORDINATE """
@@ -102,7 +109,10 @@ class IDFRouter:
                     #count = int(line[2])
                     x = float(line[3])
                     y = float(line[4])
-                    self.links[id][1].insert(-1,QgsPoint(x,y))
+                    try:
+                        self.links[id][1].insert(-1,QgsPoint(x,y))
+                    except KeyError:
+                        continue
                     
                     
                 """ LINK USE"""
@@ -135,8 +145,11 @@ class IDFRouter:
                     to_link_id = int(line[3])
                     vehicle_type = "{0:08b}".format(int(line[5]))
                     #distance = QgsGeometry.fromPolyline(self.links[from_link_id][1]).length()/2 + QgsGeometry.fromPolyline(self.links[to_link_id][1]).length()/2
-                    from_link = self.links[from_link_id]
-                    to_link = self.links[to_link_id]
+                    try:
+                        from_link = self.links[from_link_id]
+                        to_link = self.links[to_link_id]
+                    except KeyError:
+                        continue
                     len_from_link = float(from_link[0][15])
                     len_to_link = float(to_link[0][15])
                     
@@ -281,6 +294,8 @@ https://www.data.gv.at/katalog/dataset/intermodales-verkehrsreferenzsystem-oster
 """
 
 idf_file = "D:/Downloads/3_routingexport_wien_ogd/Routingexport_Wien_OGD.txt"
+idf_file = "C:/Users/anita/Downloads/3_routingexport_ogd/3_routingexport_ogd.txt"
+#idf_file = "C:/Users/anita/Documents/GitHub/QGIS-resources/qgis2/scripts/ogd/Routingexport_Wien_OGD.txt"
 
 """
 Supported router modes are:
@@ -289,7 +304,7 @@ traveltime (in minutes)
 ambulance (faster traveltime)
 """
 
-router = IDFRouter(idf_file,mode='traveltime') 
+router = IDFRouter(idf_file,mode='traveltime',bbox=QgsRectangle(16.2,48.0,16.5,48.3)) 
 router.drawLayers()
 
 """ 
