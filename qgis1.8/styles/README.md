@@ -1,8 +1,8 @@
-#QGIS Styles
+# QGIS Styles
 
 This is a collection of QGIS .qml and .sld styles. SLD is supported by QGIS >= 1.8
 
-##Contents
+## Contents
 
 * clc_2006_SLC_de.sld - Corine Land Cover - official colors (German labels)
 * corine_nice_de.qml - Corine Land Cover - nice colors (German)
