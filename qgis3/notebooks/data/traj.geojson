@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "speed": 1.0, "t": "2018-01-01T12:00:06", "prev_t": "2018-01-01T12:00:00" }, "geometry": { "type": "LineString", "coordinates": [ [ 0.0, 0.0 ], [ 6.0, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "speed": 1.5, "t": "2018-01-01T12:00:10", "prev_t": "2018-01-01T12:00:06" }, "geometry": { "type": "LineString", "coordinates": [ [ 6.0, 0.0 ], [ 6.0, 6.0 ] ] } },
+{ "type": "Feature", "properties": { "speed": 3.0, "t": "2018-01-01T12:00:15", "prev_t": "2018-01-01T12:00:10" }, "geometry": { "type": "LineString", "coordinates": [ [ 6.0, 6.0 ], [ 9.0, 9.0 ] ] } }
+]
+}
