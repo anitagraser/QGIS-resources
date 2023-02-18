@@ -1,2 +1,5 @@
 [core]
     autostage = true
+    remote = my-remote
+['remote "my-remote"']
+    url = E:\temp\qgis-dvc

@@ -1,18 +1,53 @@
 schema: '2.0'
 stages:
-  helloworld:
-    cmd: python .\qgis3\src\hello-world.py
+  randompoints:
+    cmd: python ./qgis3/src/random-points.py
     deps:
-    - path: .\qgis3\data\test.geojson
+    - path: qgis3/data/test.geojson
       md5: 2c62bf03a83001c1cb9f909a34ba6d1b
       size: 474
-    - path: .\qgis3\src\hello-world.py
-      md5: 3d8b2d60e24c922375b37aaada64e53f
+    - path: qgis3/src/random-points.py
+      md5: b275d06c8c293b1f2db3ebdff31e9995
+      size: 734
+    params:
+      params.yaml:
+        random-points.n: 12
+    outs:
+    - path: qgis3/output/random-points.geojson
+      md5: c66110bac8a6a2be0b3e842f62503fab
+      size: 2116
+  helloworld:
+    cmd: python ./qgis3/src/hello-world.py
+    deps:
+    - path: qgis3/data/test.geojson
+      md5: 2c62bf03a83001c1cb9f909a34ba6d1b
+      size: 474
+    - path: qgis3/src/hello-world.py
+      md5: 2dc448ad4c62c6ac542f8a8440ccf2d3
       size: 618
     outs:
-    - path: .\qgis3\output\test.jpg
-      md5: 97f88ad8b70aa4fc4f9186059f0662d7
-      size: 10857
-    - path: .\qgis3\output\vertices.geojson
+    - path: qgis3/output/test.png
+      md5: a1c48097c037ead6cea2467e3da8ed51
+      size: 7608
+    - path: qgis3/output/vertices.geojson
       md5: 447da8d828ee5e5ca710f882d89f7b2b
       size: 1511
+  bufferpoints:
+    cmd: python ./qgis3/src/buffer-points.py
+    deps:
+    - path: qgis3/output/random-points.geojson
+      md5: c66110bac8a6a2be0b3e842f62503fab
+      size: 2116
+    - path: qgis3/src/buffer-points.py
+      md5: 22387ba5241a831ad42d535a86df2434
+      size: 861
+    params:
+      params.yaml:
+        buffer-points.size: 1
+    outs:
+    - path: qgis3/output/buffered-points.geojson
+      md5: b97881fd13c343ce2cec88583ebe056d
+      size: 12637
+    - path: qgis3/output/buffered-points.png
+      md5: 55c09a56da89d3e506a1811f1d547ab4
+      size: 16945

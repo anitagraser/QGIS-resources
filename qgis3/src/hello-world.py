@@ -20,4 +20,4 @@ processing.run("native:extractvertices", params, feedback=feedback)
 gdf = gpd.read_file(output_filename)
 gdf.plot()
 
-plt.savefig('qgis3/output/test.jpg')
+plt.savefig('qgis3/output/test.png')

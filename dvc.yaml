@@ -1,17 +1,31 @@
 stages:
   helloworld:
-    cmd: python .\qgis3\src\hello-world.py
+    cmd: python ./qgis3/src/hello-world.py
     deps:
-    - .\qgis3\data\test.geojson
-    - .\qgis3\src\hello-world.py
+    - qgis3/data/test.geojson
+    - qgis3/src/hello-world.py
     outs:
-    - .\qgis3\output\vertices.geojson
+    - qgis3/output/vertices.geojson
     plots:
-    - .\qgis3\output\test.jpg
-
+    - qgis3/output/test.png
   randompoints:
-    cmd: python .\qgis3\src\randompoints.py
+    cmd: python ./qgis3/src/random-points.py
+    deps:
+    - qgis3/src/random-points.py
+    - qgis3/data/test.geojson
     params:
-    - randompoints.n
+    - random-points.n
     outs:
-    - .\qgis3\output\randompoints.geojson
+    - qgis3/output/random-points.geojson
+  bufferpoints:
+    cmd: python ./qgis3/src/buffer-points.py
+    deps:
+    - qgis3/src/buffer-points.py
+    - qgis3/output/random-points.geojson
+    params:
+    - buffer-points.size
+    outs:
+    - qgis3/output/buffered-points.geojson
+    plots:
+    - qgis3/output/buffered-points.png
+
