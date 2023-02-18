@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  helloworld:
+    cmd: python .\qgis3\src\hello-world.py
+    deps:
+    - path: .\qgis3\data\test.geojson
+      md5: 2c62bf03a83001c1cb9f909a34ba6d1b
+      size: 474
+    - path: .\qgis3\src\hello-world.py
+      md5: 3d8b2d60e24c922375b37aaada64e53f
+      size: 618
+    outs:
+    - path: .\qgis3\output\test.jpg
+      md5: 97f88ad8b70aa4fc4f9186059f0662d7
+      size: 10857
+    - path: .\qgis3\output\vertices.geojson
+      md5: 447da8d828ee5e5ca710f882d89f7b2b
+      size: 1511

@@ -1,0 +1,17 @@
+stages:
+  helloworld:
+    cmd: python .\qgis3\src\hello-world.py
+    deps:
+    - .\qgis3\data\test.geojson
+    - .\qgis3\src\hello-world.py
+    outs:
+    - .\qgis3\output\vertices.geojson
+    plots:
+    - .\qgis3\output\test.jpg
+
+  randompoints:
+    cmd: python .\qgis3\src\randompoints.py
+    params:
+    - randompoints.n
+    outs:
+    - .\qgis3\output\randompoints.geojson

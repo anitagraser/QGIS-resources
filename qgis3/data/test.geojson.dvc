@@ -1,0 +1,4 @@
+outs:
+- md5: 2c62bf03a83001c1cb9f909a34ba6d1b
+  size: 474
+  path: test.geojson
